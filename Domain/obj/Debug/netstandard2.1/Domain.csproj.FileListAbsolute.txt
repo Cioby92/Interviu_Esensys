@@ -1,0 +1,9 @@
+C:\Users\Lorena\source\repos\Interviu_Esensys\src\Domain\obj\Debug\netstandard2.1\Domain.AssemblyInfoInputs.cache
+C:\Users\Lorena\source\repos\Interviu_Esensys\src\Domain\obj\Debug\netstandard2.1\Domain.AssemblyInfo.cs
+C:\Users\Lorena\source\repos\Interviu_Esensys\src\Domain\obj\Debug\netstandard2.1\Domain.csproj.CoreCompileInputs.cache
+C:\Users\Lorena\source\repos\Interviu_Esensys\src\Domain\obj\Debug\netstandard2.1\Domain.csprojAssemblyReference.cache
+C:\Users\Lorena\source\repos\Interviu_Esensys\src\Domain\bin\Debug\netstandard2.1\Essensys.Domain.deps.json
+C:\Users\Lorena\source\repos\Interviu_Esensys\src\Domain\bin\Debug\netstandard2.1\Essensys.Domain.dll
+C:\Users\Lorena\source\repos\Interviu_Esensys\src\Domain\bin\Debug\netstandard2.1\Essensys.Domain.pdb
+C:\Users\Lorena\source\repos\Interviu_Esensys\src\Domain\obj\Debug\netstandard2.1\Essensys.Domain.dll
+C:\Users\Lorena\source\repos\Interviu_Esensys\src\Domain\obj\Debug\netstandard2.1\Essensys.Domain.pdb
