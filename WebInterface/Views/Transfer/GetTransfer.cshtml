@@ -1,0 +1,23 @@
+﻿@model GetTransferViewModel
+
+<div class="card">
+    <div class="card-body">
+        <form asp-controller="Transfer" asp-action="GetTransfer" method="post">
+            <div class="row">
+                CNP:
+                <input asp-for="CNP" class="form-control" />
+                <div class="invalid-feedback" style="display:block">
+                    <span asp-validation-for="CNP"></span>
+                </div>
+            </div>
+            <div class="row">
+                Token:
+                <input asp-for="Token" class="form-control" />
+                <div class="invalid-feedback" style="display:block">
+                    <span asp-validation-for="Token"></span>
+                </div>
+            </div>
+            <button class="btn btn-primary">Find</button>
+        </form>
+    </div>
+</div>

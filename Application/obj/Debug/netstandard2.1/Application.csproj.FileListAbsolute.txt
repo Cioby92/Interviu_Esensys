@@ -22,3 +22,15 @@ C:\Users\Lorena\source\repos\EssensysInterviu\Application\obj\Debug\netstandard2
 C:\Users\Lorena\source\repos\EssensysInterviu\Application\obj\Debug\netstandard2.1\Application.csproj.CopyComplete
 C:\Users\Lorena\source\repos\EssensysInterviu\Application\obj\Debug\netstandard2.1\Essensys.Application.dll
 C:\Users\Lorena\source\repos\EssensysInterviu\Application\obj\Debug\netstandard2.1\Essensys.Application.pdb
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Application\bin\Debug\netstandard2.1\Essensys.Application.deps.json
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Application\bin\Debug\netstandard2.1\Essensys.Application.dll
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Application\bin\Debug\netstandard2.1\Essensys.Application.pdb
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Application\bin\Debug\netstandard2.1\Essensys.Domain.dll
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Application\bin\Debug\netstandard2.1\Essensys.Domain.pdb
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Application\obj\Debug\netstandard2.1\Application.csprojAssemblyReference.cache
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Application\obj\Debug\netstandard2.1\Application.AssemblyInfoInputs.cache
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Application\obj\Debug\netstandard2.1\Application.AssemblyInfo.cs
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Application\obj\Debug\netstandard2.1\Application.csproj.CoreCompileInputs.cache
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Application\obj\Debug\netstandard2.1\Application.csproj.CopyComplete
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Application\obj\Debug\netstandard2.1\Essensys.Application.dll
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Application\obj\Debug\netstandard2.1\Essensys.Application.pdb

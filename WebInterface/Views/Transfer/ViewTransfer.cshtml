@@ -1,0 +1,22 @@
+﻿@model ViewTransferViewModel
+@if(@ViewBag.TokenExpired)
+{
+<label>Token has Expired! you cannot see the transcation anymore</label>
+}
+else
+{
+<div class="row">
+    <div class="card">
+        <div class="card card-title">
+            <label>Transaction @Model.TransactionId</label>
+        </div>
+
+        <div class="card-body">
+            <label>IBAN: @Model.IBAN</label>
+            <label>Innitial Ammount: @Model.InnitialAmmount @Model.SourceCurrency</label>
+            <label>Final Ammount @Model.FinalAmmount @Model.DestinationCurrency</label>
+        </div>
+    </div>
+
+</div>
+}

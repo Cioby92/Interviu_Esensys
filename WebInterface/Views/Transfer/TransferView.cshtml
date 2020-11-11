@@ -1,0 +1,198 @@
+﻿@model TransferViewModel
+@{
+}
+<form id="form" asp-controller="Transfer" asp-action="Transfer" method="post">
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="row">
+                CNP Destinatar:
+                <input asp-for="CNP" class="form-control" />
+                <div class="invalid-feedback" style="display:block;">
+                    <span asp-validation-for="CNP"></span>
+                </div>
+            </div>
+            <div class="row">
+                Ammount:
+                <input asp-for="Ammount" class="form-control" />
+                <div class="invalid-feedback" style="display:block">
+                    <span asp-validation-for="Ammount"></span>
+                </div>
+            </div>
+            <div class="row">
+                Iban:
+                <input asp-for="Iban" class="form-control" />
+                <div class="invalid-feedback" style="display:block">
+                    <span asp-validation-for="Iban"></span>
+                </div>
+            </div>
+            <div class="row">
+                Source currency:
+                <select asp-for="SourceCurrency" class="form-control" asp-items="Html.GetEnumSelectList<Essensys.Application.Common.Enums.Currency>()">
+                    <option selected="selected" value="">Please Select</option>
+                </select>
+                <div class="invalid-feedback" style="display:block">
+                    <span asp-validation-for="SourceCurrency"></span>
+                </div>
+            </div>
+            <div class="row">
+                Destination currency:
+                <select asp-for="DestinationCurrency" class="form-control" asp-items="Html.GetEnumSelectList<Essensys.Application.Common.Enums.Currency>()">
+                    <option selected="selected" value="">Please Select</option>
+                </select>
+                <div class="invalid-feedback" style="display:block">
+                    <span asp-validation-for="DestinationCurrency"></span>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <input asp-for="TermsAndCondition" type="checkbox" class="form-check-input" /> Accept terms and conditions
+                <div class="invalid-feedback" style="display:block">
+                    <span asp-validation-for="TermsAndCondition"></span>
+                </div>
+            </div>
+            <div class="row">
+                <input asp-for="Over18" type="checkbox" class="form-check-input" /> I am at least 18 years old
+                <div class="invalid-feedback" style="display:block">
+                    <span asp-validation-for="Over18"></span>
+                </div>
+            </div>
+            <br />
+            <button type="submit" class="btn btn-success">Trasnfer Money</button>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">TransferDetails</div>
+
+                </div>
+                <div class="card-body">
+                   
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-md-6">
+        <label id="Currency"></label>
+        <table id="Table_Rates" class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <td>Currency</td>
+                    <td>Exchange Rate</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+</form>
+<div id="myModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <label>Ammount of money that will be transffered</label>
+                <label id="TotalAmmount"> </label>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="SubmitForm" class="btn btn-primary">Transfer Money</button>
+                <button type="button" id="Cancel" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+
+    <script type="text/javascript">
+
+        $("#form").submit(function (event) {
+            ProcessSum();
+            $('#myModal').modal('show');
+            event.preventDefault();
+            return false;
+        }
+        );
+        document.getElementById("SubmitForm").addEventListener("click",function (event) {
+            document.getElementById("form").submit();
+        })
+        document.getElementById("Cancel").addEventListener("click",function (event) {
+            return false;
+        })
+        fetch("https://api.exchangeratesapi.io/latest").then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            rates = data.rates;
+            var table = document.getElementById("Table_Rates").getElementsByTagName('tbody')[0];;
+            document.getElementById("Currency").innerText = data.base;
+            Object.keys(data.rates).forEach(key => {
+                let row = table.insertRow();
+                let CurrencyCell = row.insertCell();
+                let ValueCell = row.insertCell();
+                let Currency = document.createTextNode(key);
+                let Value = document.createTextNode(data.rates[key]);
+                CurrencyCell.appendChild(Currency);
+                ValueCell.appendChild(Value)
+            })
+        }).catch(function (exception) {
+            console.log(exception);
+        });
+        async function fetchRate(Source_Exchange_value, Destination_Exchange_Value) {
+
+            const response = await fetch(`https://api.exchangeratesapi.io/latest?base=${Source_Exchange_value}&symbols=${Destination_Exchange_Value}`)
+            if (!response.ok) {
+                const message = `An error has occures: ${response.status}`;
+                throw new Error(message);
+            }
+            let Exchange_rate = await response.json();
+            return Exchange_rate.rates[Destination_Exchange_Value]
+        }
+
+        async function ProcessSum() {
+
+            let suma_finala = 0;
+            let suma_destinatie_baza = document.getElementById("Ammount").value;
+            if (suma_destinatie_baza < 0)
+                return;
+            let Source_Exchange_Element = document.getElementById("SourceCurrency");
+            let Source_Exchange_value = Source_Exchange_Element.options[Source_Exchange_Element.selectedIndex].text;
+            let Destination_Exchange_Element = document.getElementById("DestinationCurrency");
+            let Destination_Exchange_Value = Destination_Exchange_Element.options[Destination_Exchange_Element.selectedIndex].text;
+
+            let Exchange_Rate = await fetchRate(Source_Exchange_value, Destination_Exchange_Value);
+            let comision;
+            if (Source_Exchange_value === "EUR")
+                comision = 1;
+            else {
+
+                comision = await fetchRate(Source_Exchange_value, "EUR");
+            }
+            suma_finala = suma_destinatie_baza * Exchange_Rate;
+            if (parseInt(suma_finala) < 100) {
+                suma_finala -= 1 * comision;
+            }
+            else {
+                suma_finala -= (suma_finala / 100) * comision;
+            }
+            let label_Ammount = document.getElementById("TotalAmmount");
+            label_Ammount.innerText = `${suma_finala}  ${Destination_Exchange_Value}`;
+        }
+
+    </script>
+}

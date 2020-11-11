@@ -32,3 +32,20 @@ C:\Users\Lorena\source\repos\EssensysInterviu\Infrastructure\obj\Debug\netcoreap
 C:\Users\Lorena\source\repos\EssensysInterviu\Infrastructure\obj\Debug\netcoreapp3.1\Essensys.Infrastructure.dll
 C:\Users\Lorena\source\repos\EssensysInterviu\Infrastructure\obj\Debug\netcoreapp3.1\Essensys.Infrastructure.pdb
 C:\Users\Lorena\source\repos\EssensysInterviu\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.genruntimeconfig.cache
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Infrastructure\bin\Debug\netcoreapp3.1\Essensys.Infrastructure.deps.json
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Infrastructure\bin\Debug\netcoreapp3.1\Essensys.Infrastructure.runtimeconfig.json
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Infrastructure\bin\Debug\netcoreapp3.1\Essensys.Infrastructure.runtimeconfig.dev.json
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Infrastructure\bin\Debug\netcoreapp3.1\Essensys.Infrastructure.dll
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Infrastructure\bin\Debug\netcoreapp3.1\Essensys.Infrastructure.pdb
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Infrastructure\bin\Debug\netcoreapp3.1\Essensys.Application.dll
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Infrastructure\bin\Debug\netcoreapp3.1\Essensys.Domain.dll
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Infrastructure\bin\Debug\netcoreapp3.1\Essensys.Application.pdb
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Infrastructure\bin\Debug\netcoreapp3.1\Essensys.Domain.pdb
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csprojAssemblyReference.cache
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfo.cs
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CopyComplete
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Infrastructure\obj\Debug\netcoreapp3.1\Essensys.Infrastructure.dll
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Infrastructure\obj\Debug\netcoreapp3.1\Essensys.Infrastructure.pdb
+C:\Users\Lorena\source\repos\EssensysInterviu - 1\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.genruntimeconfig.cache
